@@ -24,7 +24,7 @@ const Header = () => {
       {/* Logo */}
       <Link href="/">
         <Image
-          src="/logo.png"
+          src="/pics/logo.png"
           alt="Logo"
           width={481}
           height={639}
@@ -34,7 +34,12 @@ const Header = () => {
 
       {/* Hamburger Menu Icon (visible on mobile) */}
       <div className="sm:hidden cursor-pointer z-20" onClick={toggleMenu}>
-        <Image src="/hamburgerMenu.png" alt="Menu" width={31} height={40} />
+        <Image
+          src="/pics/hamburgerMenu.png"
+          alt="Menu"
+          width={31}
+          height={40}
+        />
       </div>
 
       {/* Desktop Navigation (hidden on mobile) */}
