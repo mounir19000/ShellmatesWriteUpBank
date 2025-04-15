@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { B612 } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header";
+import Footer from "@/components/footer";
 
 const b612 = B612({
   weight: ["400", "700"],
@@ -23,6 +24,7 @@ export default function RootLayout({
       <body className={`${b612.className} antialiased`}>
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );

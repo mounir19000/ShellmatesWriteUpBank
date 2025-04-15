@@ -470,7 +470,7 @@ export default function WriteUpsPage() {
         <div className="mx-auto px-5 sm:px-16 lg:px-28">
           {filteredWriteups.length > 0 ? (
             <>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-9">
+              <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-8 md:gap-9">
                 {filteredWriteups.map((writeup) => (
                   <Card
                     className="h-full px-6 py-5 flex flex-col justify-between gap-3 hover:shadow-lg transition-all duration-300 hover:translate-y-[-2px] bg-gradient-to-t from-[#161E19] to-[#2C3A32] rounded-3xl border-0"
@@ -525,7 +525,7 @@ export default function WriteUpsPage() {
 
               {/* Scroll indicator */}
               {filteredWriteups.length > 6 && (
-                <div className="flex justify-center mt-6 md:mt-8 text-[#7EE787] animate-bounce">
+                <div className="flex justify-center mb-4 mt-4 md:mt-6 text-[#7EE787] animate-bounce">
                   <ChevronDown className="h-5 w-5 md:h-6 md:w-6" />
                   <span className="sr-only">Scroll for more</span>
                 </div>
@@ -533,7 +533,7 @@ export default function WriteUpsPage() {
             </>
           ) : (
             <div className="text-center py-12 md:py-16">
-              <h3 className="text-xl md:text-2xl font-bold mb-2 text-[#FFFFF]">
+              <h3 className="text-xl md:text-2xl font-bold mb-2 text-white">
                 No writeups found
               </h3>
               <p className="text-[#A9A8B3] mb-4 md:mb-6 px-4">
