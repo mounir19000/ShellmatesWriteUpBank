@@ -124,3 +124,13 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+.breaklines {
+  --tw-border-opacity: 0.25;
+}
+
+
+/* Swiper */
+.swiper-slide {
+  height: auto;
+}

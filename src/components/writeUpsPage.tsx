@@ -16,7 +16,6 @@ import {
 import { Input } from "@/components/ui/input";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
-  Search,
   Filter,
   Code,
   Lock,
@@ -307,11 +306,7 @@ export default function WriteUpsPage() {
           <div className="relative max-w-xl md:max-w-2xl mx-auto">
             <Input
               type="text"
-              placeholder={
-                window.innerWidth >= 1024
-                  ? "Search for writeups by title, description, or techniques..."
-                  : "Search for writeups..."
-              }
+              placeholder="Search for writeups..."
               className="pl-3.5 py-6 text-base md:text-lg bg-black bg-opacity-90 border-[#59D07A] text-white placeholder:text-[#727274]"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
