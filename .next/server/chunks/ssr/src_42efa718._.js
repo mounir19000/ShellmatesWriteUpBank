@@ -141,7 +141,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$utils$2e$ts__$
 function Card({ className, ...props }) {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         "data-slot": "card",
-        className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["cn"])("bg-card text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm", className),
+        className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["cn"])("bg-card text-card-foreground flex flex-col gap-6 rounded-xl border p-6 shadow-sm", className),
         ...props
     }, void 0, false, {
         fileName: "[project]/src/components/ui/card.tsx",
@@ -152,7 +152,7 @@ function Card({ className, ...props }) {
 function CardHeader({ className, ...props }) {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         "data-slot": "card-header",
-        className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["cn"])("@container/card-header grid auto-rows-min grid-rows-[auto_auto] items-start gap-1.5  has-data-[slot=card-action]:grid-cols-[1fr_auto] [.border-b]:pb-6", className),
+        className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["cn"])("@container/card-header grid auto-rows-min grid-rows-[auto_auto] items-start gap-1.5 has-data-[slot=card-action]:grid-cols-[1fr_auto] [.border-b]:pb-6", className),
         ...props
     }, void 0, false, {
         fileName: "[project]/src/components/ui/card.tsx",
@@ -343,117 +343,6 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$re
 ;
 ;
 ;
-// This would typically come from your database
-const writeups = [
-    {
-        id: 1,
-        title: "Web Exploitation: Breaking the Admin Panel",
-        category: "web",
-        event: "HackTheBox CTF 2023",
-        difficulty: "Medium",
-        date: "2023-10-15",
-        description: "A walkthrough of bypassing client-side authentication and exploiting SQL injection to access an admin panel."
-    },
-    {
-        id: 2,
-        title: "Reverse Engineering a Custom Protocol",
-        category: "reverse",
-        event: "picoCTF 2023",
-        difficulty: "Hard",
-        date: "2023-09-22",
-        description: "Analysis and reverse engineering of a custom binary protocol to extract hidden data and capture the flag."
-    },
-    {
-        id: 3,
-        title: "Forensic Analysis of Corrupted Files",
-        category: "forensics",
-        event: "DEFCON CTF Qualifier",
-        difficulty: "Medium",
-        date: "2023-08-05",
-        description: "Recovering and analyzing corrupted file headers to extract hidden information and solve the challenge."
-    },
-    {
-        id: 4,
-        title: "Cryptographic Challenge: Breaking Weak RSA",
-        category: "crypto",
-        event: "NahamCon CTF",
-        difficulty: "Easy",
-        date: "2023-07-18",
-        description: "Exploiting weaknesses in RSA implementation to decrypt a message and retrieve the flag."
-    },
-    {
-        id: 5,
-        title: "Binary Exploitation: Stack Overflow Basics",
-        category: "pwn",
-        event: "HackTheBox CTF 2023",
-        difficulty: "Medium",
-        date: "2023-06-30",
-        description: "A step-by-step guide to exploiting a basic stack overflow vulnerability to gain control of program execution."
-    },
-    {
-        id: 6,
-        title: "OSINT Challenge: Finding the Hidden Server",
-        category: "osint",
-        event: "TryHackMe Competition",
-        difficulty: "Easy",
-        date: "2023-05-12",
-        description: "Using open-source intelligence techniques to locate a hidden server and access confidential information."
-    },
-    {
-        id: 7,
-        title: "Web API Vulnerabilities Exploitation",
-        category: "web",
-        event: "picoCTF 2023",
-        difficulty: "Hard",
-        date: "2023-04-25",
-        description: "Identifying and exploiting vulnerabilities in a RESTful API to escalate privileges and capture the flag."
-    },
-    {
-        id: 8,
-        title: "Steganography: Hidden Messages in Images",
-        category: "stego",
-        event: "DEFCON CTF Qualifier",
-        difficulty: "Medium",
-        date: "2023-03-18",
-        description: "Techniques for discovering and extracting hidden messages embedded within image files."
-    },
-    {
-        id: 9,
-        title: "Hardware Hacking: RFID Card Cloning",
-        category: "hardware",
-        event: "HackTheBox CTF 2023",
-        difficulty: "Hard",
-        date: "2023-02-10",
-        description: "A detailed guide on cloning RFID cards and bypassing physical access controls."
-    },
-    {
-        id: 10,
-        title: "Mobile App Reverse Engineering",
-        category: "mobile",
-        event: "NahamCon CTF",
-        difficulty: "Medium",
-        date: "2023-01-25",
-        description: "Decompiling and analyzing a mobile application to find hidden functionality and extract the flag."
-    },
-    {
-        id: 11,
-        title: "Network Packet Analysis Challenge",
-        category: "forensics",
-        event: "picoCTF 2023",
-        difficulty: "Medium",
-        date: "2022-12-15",
-        description: "Analyzing captured network traffic to identify suspicious activities and extract hidden data."
-    },
-    {
-        id: 12,
-        title: "Advanced XSS Exploitation Techniques",
-        category: "web",
-        event: "DEFCON CTF Qualifier",
-        difficulty: "Hard",
-        date: "2022-11-20",
-        description: "Exploring advanced cross-site scripting techniques to bypass modern security controls."
-    }
-];
 // Map categories to colors and icons
 const categoryInfo = {
     web: {
@@ -462,7 +351,7 @@ const categoryInfo = {
             className: "h-4 w-4 mr-1"
         }, void 0, false, {
             fileName: "[project]/src/components/writeUpsPage.tsx",
-            lineNumber: 159,
+            lineNumber: 34,
             columnNumber: 11
         }, this)
     },
@@ -472,7 +361,7 @@ const categoryInfo = {
             className: "h-4 w-4 mr-1"
         }, void 0, false, {
             fileName: "[project]/src/components/writeUpsPage.tsx",
-            lineNumber: 163,
+            lineNumber: 38,
             columnNumber: 11
         }, this)
     },
@@ -482,7 +371,7 @@ const categoryInfo = {
             className: "h-4 w-4 mr-1"
         }, void 0, false, {
             fileName: "[project]/src/components/writeUpsPage.tsx",
-            lineNumber: 167,
+            lineNumber: 42,
             columnNumber: 11
         }, this)
     },
@@ -492,7 +381,7 @@ const categoryInfo = {
             className: "h-4 w-4 mr-1"
         }, void 0, false, {
             fileName: "[project]/src/components/writeUpsPage.tsx",
-            lineNumber: 171,
+            lineNumber: 46,
             columnNumber: 11
         }, this)
     },
@@ -502,7 +391,7 @@ const categoryInfo = {
             className: "h-4 w-4 mr-1"
         }, void 0, false, {
             fileName: "[project]/src/components/writeUpsPage.tsx",
-            lineNumber: 175,
+            lineNumber: 50,
             columnNumber: 11
         }, this)
     },
@@ -512,7 +401,7 @@ const categoryInfo = {
             className: "h-4 w-4 mr-1"
         }, void 0, false, {
             fileName: "[project]/src/components/writeUpsPage.tsx",
-            lineNumber: 179,
+            lineNumber: 54,
             columnNumber: 11
         }, this)
     },
@@ -522,7 +411,7 @@ const categoryInfo = {
             className: "h-4 w-4 mr-1"
         }, void 0, false, {
             fileName: "[project]/src/components/writeUpsPage.tsx",
-            lineNumber: 183,
+            lineNumber: 58,
             columnNumber: 11
         }, this)
     },
@@ -532,7 +421,7 @@ const categoryInfo = {
             className: "h-4 w-4 mr-1"
         }, void 0, false, {
             fileName: "[project]/src/components/writeUpsPage.tsx",
-            lineNumber: 187,
+            lineNumber: 62,
             columnNumber: 11
         }, this)
     },
@@ -542,7 +431,7 @@ const categoryInfo = {
             className: "h-4 w-4 mr-1"
         }, void 0, false, {
             fileName: "[project]/src/components/writeUpsPage.tsx",
-            lineNumber: 191,
+            lineNumber: 66,
             columnNumber: 11
         }, this)
     }
@@ -553,15 +442,29 @@ const difficultyColors = {
     Medium: "bg-yellow-900/60 text-yellow-300 border-yellow-700",
     Hard: "bg-red-900/60 text-red-300 border-red-700"
 };
-// Events for filtering
-const events = [
-    "HackTheBox CTF 2023",
-    "picoCTF 2023",
-    "DEFCON CTF Qualifier",
-    "NahamCon CTF",
-    "TryHackMe Competition"
-];
 function WriteUpsPage() {
+    const [writeups, setWriteups] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])([]);
+    const [loading, setLoading] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(true);
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
+        const fetchWriteups = async ()=>{
+            try {
+                setLoading(true);
+                const response = await fetch("/writeups/index.json");
+                if (!response.ok) {
+                    throw new Error("Failed to fetch writeups");
+                }
+                const data = await response.json();
+                setWriteups(data);
+            } catch (error) {
+                console.error("Error loading writeups:", error);
+            } finally{
+                setLoading(false);
+            }
+        };
+        fetchWriteups();
+    }, []);
+    // Events for filtering
+    const events = Array.from(new Set(writeups.map((w)=>w.event)));
     const [searchQuery, setSearchQuery] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])("");
     const [selectedCategories, setSelectedCategories] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])([]);
     const [selectedDifficulties, setSelectedDifficulties] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])([]);
@@ -625,7 +528,7 @@ function WriteUpsPage() {
         return matchesSearch && matchesCategory && matchesDifficulty && matchesEvent;
     });
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "min-h-screen flex flex-col bg-black",
+        className: "min-h-screen flex flex-col",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "py-8 md:py-14 lg:py-20",
@@ -640,7 +543,7 @@ function WriteUpsPage() {
                                     children: "CTF Writeups"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/writeUpsPage.tsx",
-                                    lineNumber: 297,
+                                    lineNumber: 189,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -648,13 +551,13 @@ function WriteUpsPage() {
                                     children: "Explore detailed walkthroughs of Capture The Flag challenges from various competitions"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/writeUpsPage.tsx",
-                                    lineNumber: 300,
+                                    lineNumber: 192,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/writeUpsPage.tsx",
-                            lineNumber: 296,
+                            lineNumber: 188,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -668,7 +571,7 @@ function WriteUpsPage() {
                                     onChange: (e)=>setSearchQuery(e.target.value)
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/writeUpsPage.tsx",
-                                    lineNumber: 307,
+                                    lineNumber: 199,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
@@ -682,7 +585,7 @@ function WriteUpsPage() {
                                                 className: "h-4 w-4 md:h-5 md:w-5 mr-1 md:mr-2"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/writeUpsPage.tsx",
-                                                lineNumber: 320,
+                                                lineNumber: 212,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -690,31 +593,31 @@ function WriteUpsPage() {
                                                 children: "Filters"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/writeUpsPage.tsx",
-                                                lineNumber: 321,
+                                                lineNumber: 213,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevron$2d$down$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronDown$3e$__["ChevronDown"], {
                                                 className: `h-3 w-3 md:h-4 md:w-4 ml-0 sm:ml-1 transition-transform ${showFilters ? "rotate-180" : ""}`
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/writeUpsPage.tsx",
-                                                lineNumber: 322,
+                                                lineNumber: 214,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/writeUpsPage.tsx",
-                                        lineNumber: 319,
+                                        lineNumber: 211,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/writeUpsPage.tsx",
-                                    lineNumber: 314,
+                                    lineNumber: 206,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/writeUpsPage.tsx",
-                            lineNumber: 306,
+                            lineNumber: 198,
                             columnNumber: 11
                         }, this),
                         showFilters && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -728,7 +631,7 @@ function WriteUpsPage() {
                                             children: "Filter Writeups"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/writeUpsPage.tsx",
-                                            lineNumber: 335,
+                                            lineNumber: 227,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
@@ -741,7 +644,7 @@ function WriteUpsPage() {
                                                     className: "h-3 w-3 md:h-4 md:w-4 mr-1"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/writeUpsPage.tsx",
-                                                    lineNumber: 344,
+                                                    lineNumber: 236,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -749,19 +652,19 @@ function WriteUpsPage() {
                                                     children: "Clear all"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/writeUpsPage.tsx",
-                                                    lineNumber: 345,
+                                                    lineNumber: 237,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/writeUpsPage.tsx",
-                                            lineNumber: 338,
+                                            lineNumber: 230,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/writeUpsPage.tsx",
-                                    lineNumber: 334,
+                                    lineNumber: 226,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$tabs$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Tabs"], {
@@ -779,7 +682,7 @@ function WriteUpsPage() {
                                                     children: "Category"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/writeUpsPage.tsx",
-                                                    lineNumber: 358,
+                                                    lineNumber: 250,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$tabs$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["TabsTrigger"], {
@@ -788,7 +691,7 @@ function WriteUpsPage() {
                                                     children: "Difficulty"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/writeUpsPage.tsx",
-                                                    lineNumber: 364,
+                                                    lineNumber: 256,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$tabs$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["TabsTrigger"], {
@@ -797,13 +700,13 @@ function WriteUpsPage() {
                                                     children: "Event"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/writeUpsPage.tsx",
-                                                    lineNumber: 370,
+                                                    lineNumber: 262,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/writeUpsPage.tsx",
-                                            lineNumber: 357,
+                                            lineNumber: 249,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$tabs$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["TabsContent"], {
@@ -821,17 +724,17 @@ function WriteUpsPage() {
                                                         ]
                                                     }, category, true, {
                                                         fileName: "[project]/src/components/writeUpsPage.tsx",
-                                                        lineNumber: 381,
+                                                        lineNumber: 273,
                                                         columnNumber: 23
                                                     }, this))
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/writeUpsPage.tsx",
-                                                lineNumber: 379,
+                                                lineNumber: 271,
                                                 columnNumber: 19
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/writeUpsPage.tsx",
-                                            lineNumber: 378,
+                                            lineNumber: 270,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$tabs$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["TabsContent"], {
@@ -846,17 +749,17 @@ function WriteUpsPage() {
                                                         children: difficulty
                                                     }, difficulty, false, {
                                                         fileName: "[project]/src/components/writeUpsPage.tsx",
-                                                        lineNumber: 405,
+                                                        lineNumber: 297,
                                                         columnNumber: 23
                                                     }, this))
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/writeUpsPage.tsx",
-                                                lineNumber: 403,
+                                                lineNumber: 295,
                                                 columnNumber: 19
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/writeUpsPage.tsx",
-                                            lineNumber: 402,
+                                            lineNumber: 294,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$tabs$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["TabsContent"], {
@@ -871,23 +774,23 @@ function WriteUpsPage() {
                                                         children: event
                                                     }, event, false, {
                                                         fileName: "[project]/src/components/writeUpsPage.tsx",
-                                                        lineNumber: 428,
+                                                        lineNumber: 320,
                                                         columnNumber: 23
                                                     }, this))
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/writeUpsPage.tsx",
-                                                lineNumber: 426,
+                                                lineNumber: 318,
                                                 columnNumber: 19
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/writeUpsPage.tsx",
-                                            lineNumber: 425,
+                                            lineNumber: 317,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/writeUpsPage.tsx",
-                                    lineNumber: 351,
+                                    lineNumber: 243,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -904,7 +807,7 @@ function WriteUpsPage() {
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/writeUpsPage.tsx",
-                                            lineNumber: 448,
+                                            lineNumber: 340,
                                             columnNumber: 17
                                         }, this),
                                         (selectedCategories.length > 0 || selectedDifficulties.length > 0 || selectedEvents.length > 0) && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -912,37 +815,60 @@ function WriteUpsPage() {
                                             children: "Filters applied"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/writeUpsPage.tsx",
-                                            lineNumber: 455,
+                                            lineNumber: 347,
                                             columnNumber: 19
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/writeUpsPage.tsx",
-                                    lineNumber: 447,
+                                    lineNumber: 339,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/writeUpsPage.tsx",
-                            lineNumber: 333,
+                            lineNumber: 225,
                             columnNumber: 13
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/writeUpsPage.tsx",
-                    lineNumber: 295,
+                    lineNumber: 187,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/components/writeUpsPage.tsx",
-                lineNumber: 294,
+                lineNumber: 186,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "flex-grow",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "mx-auto px-5 sm:px-16 lg:px-28",
-                    children: filteredWriteups.length > 0 ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Fragment"], {
+                    children: loading ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "text-center py-12 md:py-16 text-white",
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "animate-spin rounded-full h-10 w-10 border-b-2 border-[#7EE787] mx-auto mb-4"
+                            }, void 0, false, {
+                                fileName: "[project]/src/components/writeUpsPage.tsx",
+                                lineNumber: 360,
+                                columnNumber: 15
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                className: "text-lg",
+                                children: "Loading writeups..."
+                            }, void 0, false, {
+                                fileName: "[project]/src/components/writeUpsPage.tsx",
+                                lineNumber: 361,
+                                columnNumber: 15
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/src/components/writeUpsPage.tsx",
+                        lineNumber: 359,
+                        columnNumber: 13
+                    }, this) : filteredWriteups.length > 0 ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Fragment"], {
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-8 md:gap-9",
@@ -957,7 +883,7 @@ function WriteUpsPage() {
                                                         children: writeup.title
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/writeUpsPage.tsx",
-                                                        lineNumber: 475,
+                                                        lineNumber: 372,
                                                         columnNumber: 23
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -971,7 +897,7 @@ function WriteUpsPage() {
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/src/components/writeUpsPage.tsx",
-                                                                lineNumber: 479,
+                                                                lineNumber: 376,
                                                                 columnNumber: 25
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$badge$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Badge"], {
@@ -980,13 +906,13 @@ function WriteUpsPage() {
                                                                 children: writeup.difficulty
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/components/writeUpsPage.tsx",
-                                                                lineNumber: 488,
+                                                                lineNumber: 385,
                                                                 columnNumber: 25
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/components/writeUpsPage.tsx",
-                                                        lineNumber: 478,
+                                                        lineNumber: 375,
                                                         columnNumber: 23
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -997,26 +923,26 @@ function WriteUpsPage() {
                                                                 children: writeup.event
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/components/writeUpsPage.tsx",
-                                                                lineNumber: 498,
+                                                                lineNumber: 395,
                                                                 columnNumber: 25
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                                 children: writeup.date
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/components/writeUpsPage.tsx",
-                                                                lineNumber: 499,
+                                                                lineNumber: 396,
                                                                 columnNumber: 25
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/components/writeUpsPage.tsx",
-                                                        lineNumber: 497,
+                                                        lineNumber: 394,
                                                         columnNumber: 23
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/components/writeUpsPage.tsx",
-                                                lineNumber: 474,
+                                                lineNumber: 371,
                                                 columnNumber: 21
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["CardContent"], {
@@ -1026,12 +952,12 @@ function WriteUpsPage() {
                                                     children: writeup.description
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/writeUpsPage.tsx",
-                                                    lineNumber: 503,
+                                                    lineNumber: 400,
                                                     columnNumber: 23
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/writeUpsPage.tsx",
-                                                lineNumber: 502,
+                                                lineNumber: 399,
                                                 columnNumber: 21
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["CardFooter"], {
@@ -1043,28 +969,28 @@ function WriteUpsPage() {
                                                         children: "Read More"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/writeUpsPage.tsx",
-                                                        lineNumber: 512,
+                                                        lineNumber: 409,
                                                         columnNumber: 25
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/writeUpsPage.tsx",
-                                                    lineNumber: 508,
+                                                    lineNumber: 405,
                                                     columnNumber: 23
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/writeUpsPage.tsx",
-                                                lineNumber: 507,
+                                                lineNumber: 404,
                                                 columnNumber: 21
                                             }, this)
                                         ]
                                     }, writeup.id, true, {
                                         fileName: "[project]/src/components/writeUpsPage.tsx",
-                                        lineNumber: 470,
+                                        lineNumber: 367,
                                         columnNumber: 19
                                     }, this))
                             }, void 0, false, {
                                 fileName: "[project]/src/components/writeUpsPage.tsx",
-                                lineNumber: 468,
+                                lineNumber: 365,
                                 columnNumber: 15
                             }, this),
                             filteredWriteups.length > 6 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1074,7 +1000,7 @@ function WriteUpsPage() {
                                         className: "h-5 w-5 md:h-6 md:w-6"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/writeUpsPage.tsx",
-                                        lineNumber: 524,
+                                        lineNumber: 421,
                                         columnNumber: 19
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1082,13 +1008,13 @@ function WriteUpsPage() {
                                         children: "Scroll for more"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/writeUpsPage.tsx",
-                                        lineNumber: 525,
+                                        lineNumber: 422,
                                         columnNumber: 19
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/writeUpsPage.tsx",
-                                lineNumber: 523,
+                                lineNumber: 420,
                                 columnNumber: 17
                             }, this)
                         ]
@@ -1100,7 +1026,7 @@ function WriteUpsPage() {
                                 children: "No writeups found"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/writeUpsPage.tsx",
-                                lineNumber: 531,
+                                lineNumber: 428,
                                 columnNumber: 15
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1108,7 +1034,7 @@ function WriteUpsPage() {
                                 children: "Try adjusting your search or filters to find what you`re looking for."
                             }, void 0, false, {
                                 fileName: "[project]/src/components/writeUpsPage.tsx",
-                                lineNumber: 534,
+                                lineNumber: 431,
                                 columnNumber: 15
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
@@ -1117,29 +1043,29 @@ function WriteUpsPage() {
                                 children: "Clear all filters"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/writeUpsPage.tsx",
-                                lineNumber: 538,
+                                lineNumber: 435,
                                 columnNumber: 15
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/writeUpsPage.tsx",
-                        lineNumber: 530,
+                        lineNumber: 427,
                         columnNumber: 13
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/src/components/writeUpsPage.tsx",
-                    lineNumber: 465,
+                    lineNumber: 357,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/components/writeUpsPage.tsx",
-                lineNumber: 464,
+                lineNumber: 356,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/writeUpsPage.tsx",
-        lineNumber: 292,
+        lineNumber: 184,
         columnNumber: 5
     }, this);
 }

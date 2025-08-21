@@ -103,24 +103,60 @@ const categoryCodes = {
   const destDir = path.join(__dirname, '../writeups', code);
   fs.mkdirSync(destDir, { recursive: true });
 
+  // Create template writeup.md if it doesn't exist
+  const templateContent = `# ${response.title}
+
+**Category:** ${response.category}  
+**Event:** ${response.event}  
+**Difficulty:** ${response.difficulty}  
+**Date:** ${response.date}  
+**Author:** ${response.author}  
+
+## Description
+
+${response.description}
+
+## Solution
+
+[Write your solution here]
+
+## Flag
+
+\`\`\`
+[flag here]
+\`\`\`
+
+## Files
+
+- [Challenge files if any]
+
+## References
+
+- [Any references or resources used]
+`;
+
   if (fs.existsSync(path.join(srcDir, 'writeup.md'))) {
     fs.renameSync(path.join(srcDir, 'writeup.md'), path.join(destDir, 'writeup.md'));
   } else {
-    console.log(`❌ Error: writeup.md not found in ${srcDir}`);
-    return;
+    fs.writeFileSync(path.join(destDir, 'writeup.md'), templateContent);
+    console.log(`📝 Created template writeup.md for "${code}"`);
   }
 
   if (fs.existsSync(path.join(srcDir, 'images'))) {
     fs.renameSync(path.join(srcDir, 'images'), path.join(destDir, 'images'));
   } else {
-    console.log(`❌ Note: images directory not found in ${srcDir}`);
+    // Create empty images directory
+    fs.mkdirSync(path.join(destDir, 'images'), { recursive: true });
+    console.log(`📁 Created images directory for "${code}"`);
   }
 
 
   if (fs.existsSync(path.join(srcDir, 'challenge'))) {
     fs.renameSync(path.join(srcDir, 'challenge'), path.join(destDir, 'challenge'));
   } else {
-    console.log(`❌ Note: challenge directory not found in ${srcDir}`);
+    // Create empty challenge directory
+    fs.mkdirSync(path.join(destDir, 'challenge'), { recursive: true });
+    console.log(`📁 Created challenge directory for "${code}"`);
   }
 
   console.log(`✅ Successfully added writeup as "${code}"`);

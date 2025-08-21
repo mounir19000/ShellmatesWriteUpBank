@@ -4,7 +4,7 @@ import Slider from "@/components/slider";
 
 function about() {
   return (
-    <div className="h-auto lg:px-28 bg-black text-white flex flex-col lg:flex-row items-center gap-16">
+    <div className="h-auto lg:px-28 text-white flex flex-col lg:flex-row items-center gap-16">
       <div className="px-5 sm:px-16 lg:px-0 w-full lg:max-w-3xl pt-10 lg:pt-30 lg:pb-20">
         <h1 className="text-5xl font-bold mb-6">About Shellmates</h1>
         <p className="text-lg mb-6">

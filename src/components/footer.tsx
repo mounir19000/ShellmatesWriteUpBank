@@ -4,7 +4,7 @@ import Link from "next/link";
 function Footer() {
   return (
     <>
-      <div className="px-5 sm:px-16 lg:px-28 pb-4 pt-5 flex flex-col items-center justify-center gap-4 w-full bg-black bg-opacity-50 text-white">
+      <div className="px-5 sm:px-16 lg:px-28 pb-4 pt-5 flex flex-col items-center justify-center gap-4 w-full bg-black backdrop-blur text-white">
         <Link href="/">
           <Image
             src="/pics/logo.png"

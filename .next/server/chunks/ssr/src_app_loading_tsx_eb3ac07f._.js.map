@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file://D%3A/Maanjaro/ShellmatesWriteUpBank/src/app/loading.tsx"],"sourcesContent":["export default function Loading() {\r\n  return (\r\n    <div className=\"min-h-screen text-white flex items-center justify-center\">\r\n      <div className=\"text-center\">\r\n        <div className=\"animate-spin rounded-full h-12 w-12 border-b-2 border-[#7EE787] mx-auto mb-4\" />\r\n        <p className=\"text-lg text-[#A9A8B3]\">Loading...</p>\r\n      </div>\r\n    </div>\r\n  );\r\n}\r\n"],"names":[],"mappings":";;;;;AAAe,SAAS;IACtB,qBACE,8OAAC;QAAI,WAAU;kBACb,cAAA,8OAAC;YAAI,WAAU;;8BACb,8OAAC;oBAAI,WAAU;;;;;;8BACf,8OAAC;oBAAE,WAAU;8BAAyB;;;;;;;;;;;;;;;;;AAI9C","debugId":null}}]
+}

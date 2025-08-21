@@ -1,8 +1,7 @@
 "use client";
 
 import type React from "react";
-
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -27,130 +26,6 @@ import {
   ChevronDown,
   X,
 } from "lucide-react";
-
-// This would typically come from your database
-const writeups = [
-  {
-    id: 1,
-    title: "Web Exploitation: Breaking the Admin Panel",
-    category: "web",
-    event: "HackTheBox CTF 2023",
-    difficulty: "Medium",
-    date: "2023-10-15",
-    description:
-      "A walkthrough of bypassing client-side authentication and exploiting SQL injection to access an admin panel.",
-  },
-  {
-    id: 2,
-    title: "Reverse Engineering a Custom Protocol",
-    category: "reverse",
-    event: "picoCTF 2023",
-    difficulty: "Hard",
-    date: "2023-09-22",
-    description:
-      "Analysis and reverse engineering of a custom binary protocol to extract hidden data and capture the flag.",
-  },
-  {
-    id: 3,
-    title: "Forensic Analysis of Corrupted Files",
-    category: "forensics",
-    event: "DEFCON CTF Qualifier",
-    difficulty: "Medium",
-    date: "2023-08-05",
-    description:
-      "Recovering and analyzing corrupted file headers to extract hidden information and solve the challenge.",
-  },
-  {
-    id: 4,
-    title: "Cryptographic Challenge: Breaking Weak RSA",
-    category: "crypto",
-    event: "NahamCon CTF",
-    difficulty: "Easy",
-    date: "2023-07-18",
-    description:
-      "Exploiting weaknesses in RSA implementation to decrypt a message and retrieve the flag.",
-  },
-  {
-    id: 5,
-    title: "Binary Exploitation: Stack Overflow Basics",
-    category: "pwn",
-    event: "HackTheBox CTF 2023",
-    difficulty: "Medium",
-    date: "2023-06-30",
-    description:
-      "A step-by-step guide to exploiting a basic stack overflow vulnerability to gain control of program execution.",
-  },
-  {
-    id: 6,
-    title: "OSINT Challenge: Finding the Hidden Server",
-    category: "osint",
-    event: "TryHackMe Competition",
-    difficulty: "Easy",
-    date: "2023-05-12",
-    description:
-      "Using open-source intelligence techniques to locate a hidden server and access confidential information.",
-  },
-  {
-    id: 7,
-    title: "Web API Vulnerabilities Exploitation",
-    category: "web",
-    event: "picoCTF 2023",
-    difficulty: "Hard",
-    date: "2023-04-25",
-    description:
-      "Identifying and exploiting vulnerabilities in a RESTful API to escalate privileges and capture the flag.",
-  },
-  {
-    id: 8,
-    title: "Steganography: Hidden Messages in Images",
-    category: "stego",
-    event: "DEFCON CTF Qualifier",
-    difficulty: "Medium",
-    date: "2023-03-18",
-    description:
-      "Techniques for discovering and extracting hidden messages embedded within image files.",
-  },
-  {
-    id: 9,
-    title: "Hardware Hacking: RFID Card Cloning",
-    category: "hardware",
-    event: "HackTheBox CTF 2023",
-    difficulty: "Hard",
-    date: "2023-02-10",
-    description:
-      "A detailed guide on cloning RFID cards and bypassing physical access controls.",
-  },
-  {
-    id: 10,
-    title: "Mobile App Reverse Engineering",
-    category: "mobile",
-    event: "NahamCon CTF",
-    difficulty: "Medium",
-    date: "2023-01-25",
-    description:
-      "Decompiling and analyzing a mobile application to find hidden functionality and extract the flag.",
-  },
-  {
-    id: 11,
-    title: "Network Packet Analysis Challenge",
-    category: "forensics",
-    event: "picoCTF 2023",
-    difficulty: "Medium",
-    date: "2022-12-15",
-    description:
-      "Analyzing captured network traffic to identify suspicious activities and extract hidden data.",
-  },
-  {
-    id: 12,
-    title: "Advanced XSS Exploitation Techniques",
-    category: "web",
-    event: "DEFCON CTF Qualifier",
-    difficulty: "Hard",
-    date: "2022-11-20",
-    description:
-      "Exploring advanced cross-site scripting techniques to bypass modern security controls.",
-  },
-];
 
 // Map categories to colors and icons
 const categoryInfo: Record<string, { color: string; icon: React.ReactNode }> = {
@@ -199,16 +74,33 @@ const difficultyColors: Record<string, string> = {
   Hard: "bg-red-900/60 text-red-300 border-red-700",
 };
 
-// Events for filtering
-const events = [
-  "HackTheBox CTF 2023",
-  "picoCTF 2023",
-  "DEFCON CTF Qualifier",
-  "NahamCon CTF",
-  "TryHackMe Competition",
-];
-
 export default function WriteUpsPage() {
+  const [writeups, setWriteups] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchWriteups = async () => {
+      try {
+        setLoading(true);
+        const response = await fetch("/writeups/index.json");
+        if (!response.ok) {
+          throw new Error("Failed to fetch writeups");
+        }
+        const data = await response.json();
+        setWriteups(data);
+      } catch (error) {
+        console.error("Error loading writeups:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchWriteups();
+  }, []);
+
+  // Events for filtering
+  const events = Array.from(new Set(writeups.map((w) => w.event)));
+
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
   const [selectedDifficulties, setSelectedDifficulties] = useState<string[]>(
@@ -289,7 +181,7 @@ export default function WriteUpsPage() {
   });
 
   return (
-    <div className="min-h-screen flex flex-col bg-black">
+    <div className="min-h-screen flex flex-col">
       {/* Hero section with search */}
       <div className="py-8 md:py-14 lg:py-20">
         <div className="mx-auto px-5 sm:px-16 lg:px-28">
@@ -463,7 +355,12 @@ export default function WriteUpsPage() {
       {/* Results section */}
       <div className="flex-grow">
         <div className="mx-auto px-5 sm:px-16 lg:px-28">
-          {filteredWriteups.length > 0 ? (
+          {loading ? (
+            <div className="text-center py-12 md:py-16 text-white">
+              <div className="animate-spin rounded-full h-10 w-10 border-b-2 border-[#7EE787] mx-auto mb-4" />
+              <p className="text-lg">Loading writeups...</p>
+            </div>
+          ) : filteredWriteups.length > 0 ? (
             <>
               <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-8 md:gap-9">
                 {filteredWriteups.map((writeup) => (
