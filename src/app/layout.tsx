@@ -74,7 +74,7 @@ export default function RootLayout({
           />
         </div>
 
-        <div className="fixed inset-0 z-10 backdrop-blur-sm"></div>
+        <div id="backdrop" className="fixed inset-0 z-10"></div>
 
         {/* Main content with relative positioning */}
         <div className="relative z-20">

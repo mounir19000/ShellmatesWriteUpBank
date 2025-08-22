@@ -1564,6 +1564,10 @@
     background-color: #2eff6c;
   }
 
+  .bg-\[\#3fa15b\] {
+    background-color: #3fa15b;
+  }
+
   .bg-\[\#7EE787\] {
     background-color: #7ee787;
   }
@@ -1986,6 +1990,10 @@
     padding-top: calc(var(--spacing) * 5);
   }
 
+  .pt-8 {
+    padding-top: calc(var(--spacing) * 8);
+  }
+
   .pt-10 {
     padding-top: calc(var(--spacing) * 10);
   }
@@ -2008,6 +2016,10 @@
 
   .pb-4 {
     padding-bottom: calc(var(--spacing) * 4);
+  }
+
+  .pb-10 {
+    padding-bottom: calc(var(--spacing) * 10);
   }
 
   .pb-20 {
@@ -2668,6 +2680,12 @@
   }
 
   @media (hover: hover) {
+    .hover\:bg-\[\#22b84f\]:hover {
+      background-color: #22b84f;
+    }
+  }
+
+  @media (hover: hover) {
     .hover\:bg-\[\#272C34\]:hover {
       background-color: #272c34;
     }
@@ -3139,6 +3157,12 @@
   }
 
   @media (width >= 48rem) {
+    .md\:pt-14 {
+      padding-top: calc(var(--spacing) * 14);
+    }
+  }
+
+  @media (width >= 48rem) {
     .md\:text-2xl {
       font-size: var(--text-2xl);
       line-height: var(--tw-leading, var(--text-2xl--line-height));
@@ -3220,6 +3244,12 @@
   @media (width >= 64rem) {
     .lg\:py-20 {
       padding-block: calc(var(--spacing) * 20);
+    }
+  }
+
+  @media (width >= 64rem) {
+    .lg\:pt-20 {
+      padding-top: calc(var(--spacing) * 20);
     }
   }
 
@@ -3542,6 +3572,11 @@ body {
 
 .swiper-slide {
   height: auto;
+}
+
+#backdrop {
+  backdrop-filter: blur(2px);
+  background-color: #0003;
 }
 
 @property --tw-scale-x {

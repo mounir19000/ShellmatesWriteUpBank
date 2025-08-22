@@ -406,7 +406,7 @@ export default function WriteUpsPage() {
                         href={`/writeups/${writeup.id}`}
                         className="w-full flex justify-end"
                       >
-                        <Button className="bg-[#59D07A] hover:bg-[#2EFF6C] text-[#112318] font-medium text-sm md:text-base px-10 rounded-xl">
+                        <Button className="bg-[#3fa15b] hover:bg-[#22b84f] text-white font-medium text-sm md:text-base px-10 rounded-xl">
                           Read More
                         </Button>
                       </Link>

@@ -23,18 +23,22 @@ import Link from "next/link";
 function HowToSubmit() {
   return (
     <div className="min-h-screen text-white">
-      <div className=" px-5 sm:px-16 lg:px-28 py-10">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            How to Submit a Writeup
-          </h1>
-          <p className="text-xl text-[#A9A8B3] max-w-2xl mx-auto">
-            Share your CTF solutions with the Shellmates community. Follow this
-            guide to submit your writeups properly.
-          </p>
+      {/* Header */}
+      <div className="pt-8 md:pt-14 lg:pt-20">
+        <div className="mx-auto px-5 sm:px-16 lg:px-28">
+          <div className="text-center max-w-3xl mx-auto mb-6 md:mb-8">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-3 md:mb-4 text-white">
+              How to Submit a Writeup
+            </h1>
+            <p className="text-[#A9A8B3] text-base md:text-lg lg:text-xl px-2">
+              Share your CTF solutions with the Shellmates community. Follow
+              this guide to submit your writeups properly.
+            </p>
+          </div>
         </div>
+      </div>
 
+      <div className=" px-5 sm:px-16 lg:px-28 pb-10">
         {/* Quick Overview */}
         <Card className="mb-8 bg-gradient-to-r from-[#161E19] to-[#2C3A32] border-[#59D07A] border">
           <CardHeader>
