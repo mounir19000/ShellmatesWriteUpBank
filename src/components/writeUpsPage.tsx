@@ -27,6 +27,30 @@ import {
   X,
 } from "lucide-react";
 
+// Define the writeup interface
+interface Writeup {
+  id: string;
+  title: string;
+  category: string;
+  event: string;
+  difficulty: string;
+  date: string;
+  description: string;
+  author: string;
+}
+
+// Interface for raw writeup data from JSON (before normalization)
+interface RawWriteup {
+  id: string;
+  title: string;
+  category: string;
+  event: string;
+  difficulty: string;
+  date: string;
+  description: string;
+  author: string;
+}
+
 // Map categories to colors and icons
 const categoryInfo: Record<string, { color: string; icon: React.ReactNode }> = {
   web: {
@@ -74,8 +98,25 @@ const difficultyColors: Record<string, string> = {
   Hard: "bg-red-900/60 text-red-300 border-red-700",
 };
 
+// Function to normalize category names
+const normalizeCategory = (category: string): string => {
+  const categoryMap: Record<string, string> = {
+    "Binary Exploitation": "pwn",
+    "Web Exploitation": "web",
+    "Reverse Engineering": "reverse",
+    Cryptography: "crypto",
+    Forensics: "forensics",
+    OSINT: "osint",
+    Steganography: "stego",
+    Hardware: "hardware",
+    Mobile: "mobile",
+    Pwn: "pwn",
+  };
+  return categoryMap[category] || category.toLowerCase();
+};
+
 export default function WriteUpsPage() {
-  const [writeups, setWriteups] = useState([]);
+  const [writeups, setWriteups] = useState<Writeup[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -84,12 +125,24 @@ export default function WriteUpsPage() {
         setLoading(true);
         const response = await fetch("/writeups/index.json");
         if (!response.ok) {
-          throw new Error("Failed to fetch writeups");
+          throw new Error(
+            `Failed to fetch writeups: ${response.status} ${response.statusText}`
+          );
         }
-        const data = await response.json();
-        setWriteups(data);
+        const data: RawWriteup[] = await response.json();
+
+        // Normalize the category names to match our categoryInfo mapping
+        const normalizedData: Writeup[] = data.map((writeup: RawWriteup) => ({
+          ...writeup,
+          category: normalizeCategory(writeup.category),
+        }));
+
+        console.log("Fetched writeups:", normalizedData);
+        setWriteups(normalizedData);
       } catch (error) {
         console.error("Error loading writeups:", error);
+        // Set empty array on error so the component doesn't break
+        setWriteups([]);
       } finally {
         setLoading(false);
       }
