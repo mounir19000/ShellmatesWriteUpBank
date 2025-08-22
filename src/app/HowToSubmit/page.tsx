@@ -1,6 +1,5 @@
 import React from "react";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
@@ -11,14 +10,12 @@ import {
 import {
   FileText,
   GitBranch,
-  Upload,
   CheckCircle,
   AlertCircle,
   Code,
   Folder,
   Terminal,
 } from "lucide-react";
-import Link from "next/link";
 
 function HowToSubmit() {
   return (

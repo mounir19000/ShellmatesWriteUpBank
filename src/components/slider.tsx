@@ -42,9 +42,17 @@ type ImageSliderProps = {
   reverse: boolean;
 };
 
-const initialTheme = localStorage.getItem("theme") || "light";
-
 const ImageSlider = ({ images, isVertical, reverse }: ImageSliderProps) => {
+  const [initialTheme, setInitialTheme] = useState("light");
+
+  useEffect(() => {
+    const theme =
+      typeof window !== "undefined"
+        ? localStorage.getItem("theme") || "light"
+        : "light";
+    setInitialTheme(theme);
+  }, []);
+
   console.log(initialTheme);
 
   return (

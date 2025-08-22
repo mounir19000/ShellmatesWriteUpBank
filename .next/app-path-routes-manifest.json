@@ -1,0 +1,7 @@
+{
+  "/HowToSubmit/page": "/HowToSubmit",
+  "/_not-found/page": "/_not-found",
+  "/about/page": "/about",
+  "/page": "/",
+  "/writeups/[writeupId]/page": "/writeups/[writeupId]"
+}

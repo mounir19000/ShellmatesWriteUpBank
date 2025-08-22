@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file://D%3A/Maanjaro/ShellmatesWriteUpBank/src/app/writeups/%5BwriteupId%5D/page.tsx"],"sourcesContent":["\"use client\";\n\nimport { useParams } from \"next/navigation\";\n\nconst WriteupPage = () => {\n  const { writeupId } = useParams();\n\n  return (\n    <div>\n      <h1>Writeup Page</h1>\n      <p>This is the writeup page with ID: {writeupId}</p>\n    </div>\n  );\n};\n\nexport default WriteupPage;\n"],"names":[],"mappings":";;;;AAEA;;;AAFA;;AAIA,MAAM,cAAc;;IAClB,MAAM,EAAE,SAAS,EAAE,GAAG,CAAA,GAAA,qIAAA,CAAA,YAAS,AAAD;IAE9B,qBACE,6LAAC;;0BACC,6LAAC;0BAAG;;;;;;0BACJ,6LAAC;;oBAAE;oBAAmC;;;;;;;;;;;;;AAG5C;GATM;;QACkB,qIAAA,CAAA,YAAS;;;KAD3B;uCAWS","debugId":null}}]
-}
