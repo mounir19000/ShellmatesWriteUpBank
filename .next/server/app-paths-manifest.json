@@ -1,4 +1,6 @@
 {
   "/HowToSubmit/page": "app/HowToSubmit/page.js",
-  "/page": "app/page.js"
+  "/about/page": "app/about/page.js",
+  "/page": "app/page.js",
+  "/writeups/[writeupId]/page": "app/writeups/[writeupId]/page.js"
 }

@@ -1486,14 +1486,6 @@
     border-color: #272c34;
   }
 
-  .border-\[\#D0975F\] {
-    border-color: #d0975f;
-  }
-
-  .border-\[\#FFA500\] {
-    border-color: orange;
-  }
-
   .border-amber-700 {
     border-color: var(--color-amber-700);
   }
@@ -1602,10 +1594,6 @@
 
   .bg-\[\#17351F\] {
     background-color: #17351f;
-  }
-
-  .bg-\[\#FFA500\] {
-    background-color: orange;
   }
 
   .bg-amber-900 {
@@ -1862,11 +1850,6 @@
     background-image: radial-gradient(circle, #000c 0%, #0000 60%);
   }
 
-  .from-\[\#2C1810\] {
-    --tw-gradient-from: #2c1810;
-    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
-  }
-
   .from-\[\#2EFF6C33\] {
     --tw-gradient-from: #2eff6c33;
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
@@ -1879,11 +1862,6 @@
 
   .to-\[\#2C3A32\] {
     --tw-gradient-to: #2c3a32;
-    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
-  }
-
-  .to-\[\#3A2419\] {
-    --tw-gradient-to: #3a2419;
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
   }
 
@@ -2225,20 +2203,12 @@
     color: #a9a9b3;
   }
 
-  .text-\[\#E6B580\] {
-    color: #e6b580;
-  }
-
   .text-\[\#E6E6E6\] {
     color: #e6e6e6;
   }
 
   .text-\[\#F0F6FC\] {
     color: #f0f6fc;
-  }
-
-  .text-\[\#FFA500\] {
-    color: orange;
   }
 
   .text-\[\#FFFFF\] {
@@ -2806,12 +2776,6 @@
   @media (hover: hover) {
     .hover\:text-\[\#7E848F\]:hover {
       color: #7e848f;
-    }
-  }
-
-  @media (hover: hover) {
-    .hover\:text-\[\#FFB84D\]:hover {
-      color: #ffb84d;
     }
   }
 
